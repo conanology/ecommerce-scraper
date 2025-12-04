@@ -117,7 +117,7 @@ def main():
 
     # Display sample
     if len(df) > 0:
-        print(f"\n[DATA] Sample data:")
+        print("\n[DATA] Sample data:")
         print(df.head())
 
 
