@@ -26,7 +26,18 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
+# Default: Scrapes books.toscrape.com (practice site)
+python main.py
+
+# Custom URL
 python main.py --url "https://example.com" --output output/results.csv
+```
+
+**Live Demo:** Try it now with the default URL to see real data collection in action!
+
+```bash
+python main.py
+# Collects 20+ products with name, price, rating, availability
 ```
 
 ## Output Format
@@ -55,4 +66,4 @@ For questions or custom scraping projects, contact me at [your-email]
 
 ---
 
-**Note:** This is a portfolio project demonstrating web scraping capabilities. Use responsibly and respect websites' Terms of Service.
+**Note:** This project uses books.toscrape.com as the default target, a website specifically designed for web scraping practice. The scraper is fully functional and collects real data. The code can be customized for other e-commerce sites by adjusting CSS selectors. Always respect robots.txt and Terms of Service when scraping websites.
