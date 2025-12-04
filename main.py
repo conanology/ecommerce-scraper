@@ -2,7 +2,8 @@
 """
 E-Commerce Product Scraper
 
-Python scraper for extracting product information (name, price, rating) from e-commerce sites. Exports to CSV/Excel.
+Python scraper for extracting product information (name, price, rating)
+from e-commerce sites. Exports to CSV/Excel.
 
 Usage:
     python main.py --url <target_url>
@@ -33,7 +34,7 @@ def scrape_data(url):
     response = requests.get(url, headers=headers)
     response.raise_for_status()
 
-    soup = BeautifulSoup(response.content, 'html.parser')
+    soup = BeautifulSoup(response.content, 'html.parser')  # noqa: F841
 
     # TODO: Implement actual scraping logic
     # This is a template - customize per project
@@ -47,6 +48,8 @@ def scrape_data(url):
     #         'price': item.select_one('.price').text.strip(),
     #     })
 
+    # For template purposes, return empty DataFrame
+    # In real use, data would be populated from soup parsing above
     return pd.DataFrame(data)
 
 
